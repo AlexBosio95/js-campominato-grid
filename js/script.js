@@ -10,19 +10,28 @@
 // Prendo il bottone
 const btnPlay = document.querySelector('#btn-play');
 
+let create = false;
+
 // Prendo il contenitore dei box
 const gridContainer = document.querySelector('.container .grid-container');
 
 btnPlay.addEventListener('click', function () {
 
-    for (let i = 1; i < 101; i++) {
-        const newBox = makeBox();
+    if (!create){
 
-        newBox.innerHTML = i;
-
-        gridContainer.append(newBox)
+        for (let i = 1; i < 101; i++) {
+            const newBox = makeBox();
+    
+            newBox.innerHTML = i;
+    
+            gridContainer.append(newBox)
+        }
+        create = true;
         
     }
+
+
+
 
 })
 
