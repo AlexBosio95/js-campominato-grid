@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+header {
+    height: 10vh;
+    width: 100%;
+    background-color: white;
+}
+
+main {
+    height: 80vh;
+    width: 100%;
+    background-color: dodgerblue;
+}
+
+footer {
+    height: 10vh;
+    width: 100%;
+    background-color: white;
+}
+
+.grid-container {
+    width: 550px;
+    height: 550px;
+
+}
+
+div.box{
+    float: left;
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+
+div.box,
+div.grid-container{
+    border: 2px solid white;
+}
