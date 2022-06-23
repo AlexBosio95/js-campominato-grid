@@ -41,6 +41,18 @@ div.box{
     height: calc(100% / 10);
 }
 
+div.box-st{
+    float: left;
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+
+div.box-h{
+    float: left;
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+}
+
 div.box,
 div.grid-container{
     border: 2px solid white;
