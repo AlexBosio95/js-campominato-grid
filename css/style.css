@@ -42,13 +42,11 @@ div.box{
 }
 
 div.box-st{
-    float: left;
     width: calc(100% / 9);
     height: calc(100% / 9);
 }
 
 div.box-h{
-    float: left;
     width: calc(100% / 7);
     height: calc(100% / 7);
 }

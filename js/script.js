@@ -15,10 +15,8 @@ const difficultySel = document.querySelector('#sel-difficulty');
 // Prendo gli elementi
 const difficultyElementSel = document.querySelectorAll('#sel-difficulty option');
 
-console.log(difficultyElementSel[1]);
+console.log(difficultyElementSel);
 
-
-let create = false;
 
 // Prendo il contenitore dei box
 const gridContainer = document.querySelector('.container .grid-container');
@@ -27,8 +25,7 @@ const gridContainer = document.querySelector('.container .grid-container');
 // Bottone Play Game (crea la griglia)
 btnPlay.addEventListener('click', function () {
 
-   if (difficultyElementSel[1]){
-    if (!create) {
+    makeGrid(gridContainer);
 
         for (let i = 1; i < 101; i++) {
             const newBox = makeBox();
@@ -37,58 +34,17 @@ btnPlay.addEventListener('click', function () {
             newBox.innerHTML = i;
 
             gridContainer.append(newBox);
-
                 // click sul box
                 clikElement(newBox, i);
-                isClicked = true;
         }
-        create = true;
-    }
-
-
-   } else if (difficultyElementSel[2]){
-
-    if (!create) {
-
-        for (let i = 1; i < 82; i++) {
-            const newBox = makeBox();
-            newBox.classList.add('box-st', 'text-black', 'd-flex', 'justify-content-center', 'align-items-center')
-
-            newBox.innerHTML = i;
-
-            gridContainer.append(newBox);
-
-                // click sul box
-                clikElement(newBox, i);
-                isClicked = true;
-        }
-        create = true;
-    }
-
-
-   } else {
-
-    if (!create) {
-
-        for (let i = 1; i < 50; i++) {
-            const newBox = makeBox();
-            newBox.classList.add('box-h', 'text-black', 'd-flex', 'justify-content-center', 'align-items-center')
-
-            newBox.innerHTML = i;
-
-            gridContainer.append(newBox);
-
-                // click sul box
-                clikElement(newBox, i);
-                isClicked = true;
-        }
-        create = true;
-    }
-
-   }
-
 
 })
+
+// Funzione crea grid
+function makeGrid(parent){
+    parent.innerHTML = ''
+
+}
 
 
 
