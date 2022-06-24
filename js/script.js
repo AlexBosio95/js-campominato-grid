@@ -25,7 +25,7 @@ const gridContainer = document.querySelector('.container .grid-container');
 // Bottone Play Game (crea la griglia)
 btnPlay.addEventListener('click', function () {
 
-    makeGrid(gridContainer);
+    resetGrid(gridContainer);
 
         for (let i = 1; i < 101; i++) {
             const newBox = makeBox();
@@ -41,7 +41,7 @@ btnPlay.addEventListener('click', function () {
 })
 
 // Funzione crea grid
-function makeGrid(parent){
+function resetGrid(parent){
     parent.innerHTML = ''
 
 }
